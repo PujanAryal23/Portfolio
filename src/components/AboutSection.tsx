@@ -100,7 +100,7 @@ const AboutSection = () => {
                 </li>
                 <li className="flex items-center">
                   <Clock size={18} className="text-primary mr-3" />
-                  <span>5+ Years of Experience</span>
+                  <span>6+ Years of Experience</span>
                 </li>
               </ul>
               <div className="pt-4">

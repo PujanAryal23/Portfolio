@@ -24,7 +24,7 @@ const Footer = () => {
           
           <div className="flex items-center space-x-4">
             <a
-              href="https://github.com"
+              href="https://github.com/PujanAryal23"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 transition-colors"

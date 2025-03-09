@@ -30,7 +30,7 @@ const NavBar = () => {
   ];
 
   const socialLinks = [
-    { name: 'GitHub', href: 'https://github.com', icon: <Github size={18} /> },
+    { name: 'GitHub', href: 'https://github.com/PujanAryal23', icon: <Github size={18} /> },
     { name: 'LinkedIn', href: 'https://linkedin.com/in', icon: <Linkedin size={18} /> },
     { name: 'Email', href: 'mailto:aryalpujan@gmail.com', icon: <Mail size={18} /> },
     { name: 'Resume', href: '#', icon: <FileText size={18} /> },

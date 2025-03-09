@@ -1,7 +1,26 @@
 
 import { Github, Linkedin, Mail, Send, FileText } from 'lucide-react';
+import { useRef } from 'react';
+import html2pdf from 'html2pdf.js';
 
 const ContactSection = () => {
+  const resumeRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadPDF = () => {
+    if (resumeRef.current) {
+      html2pdf()
+        .from(resumeRef.current)
+        .set({
+          margin: 10,
+          filename: "My_Resume.pdf",
+          image: { type: "jpeg", quality: 0.98 },
+          html2canvas: { scale: 2 },
+          jsPDF: { orientation: "portrait", unit: "mm", format: "a4" },
+        })
+        .save();
+    }
+  };
+  
   return (
     <section id="contact" className="py-20 relative">
       <div className="absolute inset-0 pointer-events-none">
@@ -67,9 +86,9 @@ const ContactSection = () => {
                   </div>
                 </a>
                 
-                <a 
-                  href="#"
-                  className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"
+                <button
+                  onClick={handleDownloadPDF}
+                  className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group w-full text-left"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500/20 transition-colors">
                     <FileText size={20} />
@@ -78,7 +97,7 @@ const ContactSection = () => {
                     <h4 className="font-medium text-gray-200">Resume</h4>
                     <p className="text-gray-400 text-sm">Download PDF Version</p>
                   </div>
-                </a>
+                </button>
               </div>
             </div>
           </div>

@@ -33,7 +33,7 @@ const Footer = () => {
               <Github size={18} />
             </a>
             <a
-              href="https://linkedin.com/in"
+              href="https://www.linkedin.com/in/pujan-aryal-548786136/"
               target="_blank"
               rel="noopener noreferrer"
               className="w-10 h-10 flex items-center justify-center rounded-full bg-slate-800 hover:bg-slate-700 transition-colors"

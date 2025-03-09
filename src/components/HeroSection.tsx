@@ -29,7 +29,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-lg text-gray-300 animate-fade-in animate-delay-200">
-                Highly skilled and results-driven QA Automation Engineer with 5 years of extensive experience 
+                Highly skilled and results-driven QA Automation Engineer with 6 years of extensive experience 
                 in designing, developing, and implementing automated testing solutions.
               </p>
               
@@ -50,7 +50,7 @@ const HeroSection = () => {
 
               <div className="flex gap-5 pt-5 animate-fade-in animate-delay-400">
                 <div className="flex flex-col items-center">
-                  <p className="text-3xl font-bold text-primary">5+</p>
+                  <p className="text-3xl font-bold text-primary">6+</p>
                   <p className="text-sm text-gray-400">Years of Experience</p>
                 </div>
                 <div className="h-10 border-l border-gray-700"></div>

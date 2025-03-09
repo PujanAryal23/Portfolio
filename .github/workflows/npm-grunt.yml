@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main  # Change to your main branch name if different
+      - main  # Change this if your default branch is different
 
 permissions:
   contents: read
@@ -21,24 +21,28 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18  # Use the Node.js version your project requires
+          node-version: 18  # Change this to your Node.js version
           cache: "npm"
 
       - name: Install Dependencies
-        run: npm install  # or yarn install if using Yarn
+        run: npm install  # Use 'yarn install' if using Yarn
 
       - name: Build Project
-        run: npm run build  # or yarn build
+        run: npm run build  # Adjust if using a different build command
 
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist  # Change this if your build output is in another folder
+          path: dist  # Change to your actual build folder (e.g., build/ or public/)
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages  # REQUIRED: This fixes the "Missing environment" error
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4

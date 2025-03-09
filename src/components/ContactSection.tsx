@@ -38,7 +38,7 @@ const ContactSection = () => {
                 </a>
                 
                 <a 
-                  href="https://linkedin.com/in" 
+                  href="https://www.linkedin.com/in/pujan-aryal-548786136/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"
@@ -53,7 +53,7 @@ const ContactSection = () => {
                 </a>
                 
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/PujanAryal23/" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"

@@ -55,7 +55,7 @@ const HeroSection = () => {
                 </div>
                 <div className="h-10 border-l border-gray-700"></div>
                 <div className="flex flex-col items-center">
-                  <p className="text-3xl font-bold text-primary">20+</p>
+                  <p className="text-3xl font-bold text-primary">10+</p>
                   <p className="text-sm text-gray-400">Projects Completed</p>
                 </div>
                 <div className="h-10 border-l border-gray-700"></div>

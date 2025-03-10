@@ -39,7 +39,7 @@ const ContactSection = () => {
       heightLeft -= pageHeight;
     }
 
-    pdf.save('MyWebsite.pdf'); // Save the PDF
+    pdf.save('Pujan-Resume.pdf'); // Save the PDF
   };
 
   return (

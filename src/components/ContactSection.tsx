@@ -1,31 +1,49 @@
 import { Github, Linkedin, Mail, Send, FileText } from 'lucide-react';
-import html2pdf from 'html2pdf.js';
-
-const downloadPDF = () => {
-  const element = document.getElementById('website-content'); // Capture entire site
-
-  if (!element) return;
-
-  const options = {
-    margin: [5, 5], // Small margin for better space utilization
-    filename: 'MyPortfolio.pdf',
-    image: { type: 'jpeg', quality: 1.0 }, // Maximum image quality
-    html2canvas: {
-      scale: 4, // Higher scale for best clarity
-      useCORS: true,
-      allowTaint: true,
-      logging: false,
-    },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: false }, // No compression for best quality
-    pagebreak: { mode: ['css', 'legacy'], before: '.page-break' }, // Control page breaks
-  };
-
-  html2pdf().set(options).from(element).save();
-};
+import { useRef } from 'react';
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
 
 const ContactSection = () => {
+  const pdfRef = useRef<HTMLDivElement>(null);
+
+  // Function to capture a specific section and download as PDF
+  const downloadPDF = async () => {
+    const element = document.getElementById('website-content'); // Capture specific section using ID
+
+    if (!element) return;
+
+    // Use html2canvas to capture the content as a canvas
+    const canvas = await html2canvas(element, {
+      scale: 2, // Increase scale for higher resolution
+      logging: false, // Disable logging to avoid console clutter
+      useCORS: true, // Enable cross-origin image rendering if needed
+    });
+
+    const imgData = canvas.toDataURL('image/png'); // Convert canvas to image
+    const pdf = new jsPDF('p', 'mm', 'a4'); // Create a new PDF document
+    const imgWidth = 210; // A4 width in mm
+    const pageHeight = 297; // A4 height in mm
+    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Calculate image height based on the aspect ratio
+
+    let heightLeft = imgHeight;
+    let position = 0;
+
+    pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight); // Add the first page
+    heightLeft -= pageHeight;
+
+    // Add more pages if needed
+    while (heightLeft > 0) {
+      position = heightLeft - imgHeight;
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+    }
+
+    pdf.save('MyWebsite.pdf'); // Save the PDF
+  };
+
   return (
-    <section id="contact" className="py-20 relative">
+    <section ref={pdfRef} id="website-content" className="py-20 relative">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-72 h-72 bg-primary/30 rounded-full filter blur-3xl opacity-10"></div>
         <div className="absolute bottom-0 left-0 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl opacity-10"></div>
@@ -47,7 +65,7 @@ const ContactSection = () => {
 
               <div className="space-y-6">
                 <a
-                  href="mailto:aryalpujan@gmail.com"
+                  href="mailto:aryalpujan@gmail.com" 
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/10 text-blue-500 group-hover:bg-blue-500/20 transition-colors">
@@ -61,7 +79,7 @@ const ContactSection = () => {
 
                 <a
                   href="https://www.linkedin.com/in/pujan-aryal-548786136/"
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"
                 >
@@ -76,7 +94,7 @@ const ContactSection = () => {
 
                 <a
                   href="https://github.com/PujanAryal23/"
-                  target="_blank"
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group"
                 >
@@ -90,11 +108,8 @@ const ContactSection = () => {
                 </a>
 
                 <a
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    downloadPDF();
-                  }}
+                  href="#" 
+                  onClick={(e) => { e.preventDefault(); downloadPDF(); }} // 🟢 Integrating PDF download function
                   className="flex items-center p-4 rounded-lg bg-secondary/50 hover:bg-secondary transition-colors gap-4 group w-full text-left"
                 >
                   <div className="flex items-center justify-center w-12 h-12 rounded-full bg-emerald-500/10 text-emerald-500 group-hover:bg-emerald-500/20 transition-colors">
@@ -116,34 +131,17 @@ const ContactSection = () => {
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
-                    <label htmlFor="name" className="text-sm font-medium text-gray-300">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-white/5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Your Name"
-                    />
+                    <label htmlFor="name" className="text-sm font-medium text-gray-300">Name</label>
+                    <input type="text" id="name" className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-white/5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your Name" />
                   </div>
 
                   <div className="space-y-2">
-                    <label htmlFor="email" className="text-sm font-medium text-gray-300">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-white/5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
-                      placeholder="Your Email"
-                    />
+                    <label htmlFor="email" className="text-sm font-medium text-gray-300">Email</label>
+                    <input type="email" id="email" className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-white/5 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary" placeholder="Your Email" />
                   </div>
                 </div>
 
-                <button
-                  type="submit"
-                  className="w-full md:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 transition-colors text-white font-medium"
-                >
+                <button type="submit" className="w-full md:w-auto inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary hover:bg-primary/90 transition-colors text-white font-medium">
                   <Send size={18} className="mr-2" />
                   Send Message
                 </button>

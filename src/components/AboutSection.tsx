@@ -22,7 +22,7 @@ const AboutSection = () => {
                 Professional Summary
               </h3>
               <p className="text-gray-300">
-                Highly skilled and results-driven QA Automation Engineer with 5 years of extensive experience 
+                Highly skilled and results-driven QA Automation Engineer with 6+ years of extensive experience 
                 in designing, developing, and implementing automated testing solutions. Demonstrated expertise in 
                 ensuring the delivery of high-quality software products by identifying and rectifying defects early 
                 in the development cycle.
@@ -59,7 +59,7 @@ const AboutSection = () => {
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-2"></span>
-                  <span>CI/CD Pipeline Configuration</span>
+                  <span>CI/CD Pipeline Integration</span>
                 </li>
                 <li className="flex items-start">
                   <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary mt-2 mr-2"></span>

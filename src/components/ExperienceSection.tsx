@@ -10,14 +10,12 @@ const experiences = [
     company: 'Logpoint',
     period: '04/2022 - Present, Kathmandu',
     responsibilities: [
-      'Contributed to LogPoint SIEM product which is a leading security information and event management (SIEM) solution that enables organizations to efficiently detect, investigate, and respond to cyber threats by aggregating and analyzing log data from various sources with its powerful analytics and real-time monitoring capabilities.',
-      'Developed and maintained robust and scalable test automation frameworks using Cypress, Selenium, Python and Robot Framework.',
-      'Designed and executed test cases for new features, identifying and documenting defects to improve the overall software quality.',
-      'Created efficient test scripts and scenarios for JMeter performance testing, simulating realistic user scenarios and measuring system behavior under different loads. Also, conducted API testing using JMeter, ensuring the functionality and performance of RESTful APIs.',
-      'Managed the configuration and maintenance of the CI/CD pipeline using Jenkins, automating build and test processes and facilitating seamless deployment.',
-      'Leveraged Python and Bash scripting to automate backend tests, streamlining tasks such as database testing, API testing, and system-level testing.',
-      'Mentored junior team members, providing guidance on test automation best practices, conducting code reviews, and troubleshooting.',
-      'Actively participated in Scrum/Agile meetings, including daily stand-ups, sprint planning, and retrospective sessions'
+      'Enhanced test coverage by 70% including UI (Web/Desktop), API, Backend and Database tests by developing and maintaining scalable test automation frameworks using Cypress, Selenium, Python, Robot Framework, Bash and AutoIT leading to faster and more reliable test execution.',
+      'Decreased test execution time by 50% by implementing parallel test execution and API driven test setups accelerating feedback loops.',
+      'Designed and developed 300+ test cases for new features, identifying and documenting 100+ defects, improving software stability.',
+      'Implemented and managed Jenkins pipeline for CI and nightly test execution enabling early defect detection and maintaining software stability.',
+      'Automated machine provisioning, patching, and ISO setup using Terraform, Govc, PowerShell, and Bash, eliminating manual intervention.',
+      'Mentored and trained 5+ QA engineers, improving team productivity and ensuring adherence to best practices in test automation.',
     ]
   },
   {
@@ -26,13 +24,11 @@ const experiences = [
     company: 'Teksewa',
     period: '05/2021 - 04/2022, Kathmandu',
     responsibilities: [
-      'Contributed to Integrated Project Development(IPD) product which is a fully integrated web solution that provides all functional aspects of road and bridge construction starting with estimate creation and electronic bidding, through construction management and then processing final contractor payment and project closeout.',
-      'Developed and maintained a robust test automation framework using Selenium and C# from scratch, improving overall product quality and streamlining the testing process.',
-      'Mentored and provided technical guidance to junior members of the automation team, fostering knowledge sharing and promoting professional growth.',
-      'Coordinated and supervised the creation, review, and maintenance of test cases, test scripts, and test data to ensure comprehensive test coverage based on project requirements and specifications.',
-      'Collaborated closely with developers, product managers, and stakeholders to identify issues, track defects, and ensure timely resolution.',
-      'Conducted performance and load testing, identifying and addressing system bottlenecks to enhance product performance.',
-      'Identified and resolved numerous bugs and issues throughout the development process, utilizing strong problem-solving skills to address root causes and implement effective solutions.',
+      'Developed and maintained web and mobile test automation framework from scratch using Selenium, Appium and C#, enhancing test coverage by 40% and driving overall product quality improvements.',
+      'Led a team of 3 QA Engineers, mentoring them on manual and automation best practices, resulting in improved and streamlined testing processes.',
+      'Conducted performance and load testing with JMeter, identifying system bottlenecks and optimizing product performance by 20%.',
+      'Implemented and managed Jenkins pipeline for CI and nightly test execution enabling early defect detection and maintaining software stability.',
+      'Identified and resolved 50+ critical bugs by analyzing test automation reports and conducting root cause analysis,driving improvements in test efficiency and product stability.',
       'Actively participated in Agile/Scrum development processes, contributing to sprint planning, daily stand-ups, and sprint reviews.'
     ]
   },
@@ -40,13 +36,14 @@ const experiences = [
     id: 'cotiviti',
     title: 'Software Engineer (QA Automation)',
     company: 'Cotiviti',
-    period: '08/2018 - 04/2021, Kathmandu',
+    period: '11/2018 - 04/2021, Kathmandu',
     responsibilities: [
-      'Contributed to Nucleus, a payment accuracy product that leverages advanced analysis of healthcare insurance claims and provider billing patterns to ensure precise claims reimbursement.',
-      'Expanded and strengthened the automation framework and test scripts using Selenium and C#, including developing new functionalities and enhancing existing features. Also maintained the automation framework by monitoring its performance, addressing issues, and ensuring smooth operation.',
-      'Actively tracked bugs and defects, documenting them and providing comprehensive reports to the development team and collaborated closely with developers to facilitate the timely resolution of issues, contributing to overall software quality.',
-      'Utilized JMeter to conduct performance and load tests, simulating real-world scenarios and analyzing system behavior under heavy user loads. Identified performance bottlenecks and made optimization recommendations based on test results.',
-      'Created detailed and comprehensive test plans and cases, documenting test scenarios, steps, expected outcomes, and specific test data or configurations required.'
+      'Developed 200+ automation tests using Selenium and C# leading to a 30% improvement in test coverage.',
+      'Reduced test execution time by 40% through parallel execution, framework optimization, and elimination of test dependencies, speeding up feedback loops.',
+      'Optimized the automation framework and test suites, improving test reliability and reducing flakiness and false positives/negatives by 20%.',
+      'Used JMeter for performance and load testing, identifying bottlenecks that improved system performance and scalibility.',
+      'Created an in-house automation dashboard using Ember and Node, improving visibility into performance and functional test execution status.',
+      'Implemented and managed Bamboo plans for nightly test execution enabling early defect detection and maintaining software stability.'
     ]
   }
 ];
@@ -65,7 +62,7 @@ const ExperienceSection = () => {
           <h2 className="text-3xl font-bold mb-4 text-gradient">Work Experience</h2>
           <div className="h-1 w-20 bg-primary rounded-full mx-auto mb-8"></div>
           <p className="text-gray-300">
-            Over 5 years of professional experience in QA automation and software engineering
+            Over 6+ years of professional experience in QA automation and software engineering
           </p>
         </div>
 

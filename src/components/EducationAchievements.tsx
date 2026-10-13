@@ -76,16 +76,28 @@ const EducationAchievements = () => {
                 degree: 'B.E. Computer Science & Engineering',
                 institution: 'Nepal Engineering College, Bhaktapur',
                 period: '2012–2016',
+                majorSubjects: [
+                  'Data Structures',
+                  'Algorithms',
+                  'Database Management',
+                  'Software Engineering',
+                  'Web Development',
+                  'Operating Systems',
+                  'Computer Networks',
+                  'Programming Languages',
+                ],
               },
               {
                 degree: '+2 Science',
                 institution: 'Goldengate International College',
                 period: '2010–2012',
+                majorSubjects: ['Mathematics', 'Chemistry', 'Physics', 'Biology', 'English'],
               },
               {
                 degree: 'SLC',
                 institution: 'Manakamana Higher Secondary School',
                 period: '1997–2010',
+                majorSubjects: ['Mathematics', 'Chemistry', 'Physics', 'Biology', 'English'],
               },
             ].map((education, index) => (
               <div
@@ -107,6 +119,16 @@ const EducationAchievements = () => {
                     <MapPin size={16} className="mr-2 text-primary" />
                     <span className="font-medium">{education.institution}</span>
                   </div>
+                  {'majorSubjects' in education && (
+                    <div className="pt-2">
+                      <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-3">Major Subjects</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {education.majorSubjects.map((subject) => (
+                          <span key={subject} className="skill-chip">{subject}</span>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
               </div>
             ))}

@@ -22,18 +22,13 @@ const AboutSection = () => {
                 Professional Summary
               </h3>
               <p className="text-gray-300">
-                Highly skilled and results-driven QA Automation Engineer with 6+ years of extensive experience 
-                in designing, developing, and implementing automated testing solutions. Demonstrated expertise in 
-                ensuring the delivery of high-quality software products by identifying and rectifying defects early 
-                in the development cycle.
+                Results-driven QA Automation Engineer with 8+ years of experience building test automation solutions across multiple industries.
               </p>
               <p className="text-gray-300">
-                Possess a strong understanding of testing methodologies, agile practices, and continuous integration, 
-                coupled with a passion for innovation and continuous learning. 
+                Possess a strong understanding of testing methodologies, agile practices, and continuous integration, coupled with a passion for innovation and continuous learning.
               </p>
               <p className="text-gray-300">
-                Seeking a challenging role to contribute my technical proficiency and problem-solving abilities 
-                in a dynamic and collaborative environment.
+                Seeking a challenging role to contribute my technical proficiency and problem-solving abilities in a dynamic and collaborative environment.
               </p>
             </div>
           </div>
@@ -100,28 +95,24 @@ const AboutSection = () => {
                 </li>
                 <li className="flex items-center">
                   <Clock size={18} className="text-primary mr-3" />
-                  <span>6+ Years of Experience</span>
+                  <span>8+ Years of Experience</span>
                 </li>
               </ul>
               <div className="pt-4">
-                <h4 className="text-sm uppercase text-gray-400 mb-2">Languages</h4>
+                <h4 className="text-sm uppercase text-gray-400 mb-2">English Proficiency</h4>
                 <div className="space-y-2">
                   <div>
                     <div className="flex justify-between mb-1">
-                      <span>English</span>
-                      <span>Advanced</span>
+                      <span>PTE Academic</span>
+                      <span>Overall: 89</span>
                     </div>
-                    <div className="h-1.5 bg-gray-700 rounded-full">
-                      <div className="h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-primary w-[90%]"></div>
-                    </div>
+                    <p className="text-sm text-gray-400">Listening 84 · Reading 81 · Speaking 75 · Writing 88</p>
                   </div>
+                  <h4 className="text-sm uppercase text-gray-400 pt-2">Languages</h4>
                   <div>
                     <div className="flex justify-between mb-1">
                       <span>Nepali</span>
                       <span>Native</span>
-                    </div>
-                    <div className="h-1.5 bg-gray-700 rounded-full">
-                      <div className="h-1.5 rounded-full bg-gradient-to-r from-blue-500 to-primary w-full"></div>
                     </div>
                   </div>
                 </div>

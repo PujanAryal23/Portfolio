@@ -33,7 +33,7 @@ const NavBar = () => {
     { name: 'GitHub', href: 'https://github.com/PujanAryal23', icon: <Github size={18} /> },
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/pujan-aryal-548786136/', icon: <Linkedin size={18} /> },
     { name: 'Email', href: 'mailto:aryalpujan@gmail.com', icon: <Mail size={18} /> },
-    { name: 'Resume', href: '#', icon: <FileText size={18} /> },
+    { name: 'Resume', href: '/Pujan-Aryal-Resume.pdf', icon: <FileText size={18} /> },
   ];
 
   return (

@@ -70,45 +70,46 @@ const EducationAchievements = () => {
             <div className="h-1 w-20 bg-primary rounded-full mx-auto mb-8"></div>
           </div>
           
-          <div className="max-w-4xl mx-auto">
-            <div className="glass-card p-6 rounded-xl animate-fade-in">
-              <div className="flex flex-col md:flex-row md:items-start gap-6">
-                <div className="flex-shrink-0 flex items-center justify-center w-16 h-16 rounded-lg bg-secondary/70 text-primary">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                degree: 'B.E. Computer Science & Engineering',
+                institution: 'Nepal Engineering College, Bhaktapur',
+                period: '2012–2016',
+              },
+              {
+                degree: '+2 Science',
+                institution: 'Goldengate International College',
+                period: '2010–2012',
+              },
+              {
+                degree: 'SLC',
+                institution: 'Manakamana Higher Secondary School',
+                period: '1997–2010',
+              },
+            ].map((education, index) => (
+              <div
+                key={education.degree}
+                className="glass-card p-6 rounded-xl animate-fade-in"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="flex items-center justify-center w-16 h-16 rounded-lg bg-secondary/70 text-primary mb-5">
                   <BookOpen size={28} />
                 </div>
-                
+
                 <div className="space-y-4">
-                  <div>
-                    <div className="flex items-center justify-between flex-wrap gap-3">
-                      <h3 className="text-xl font-bold text-gradient-primary">Bachelor in Computer Science and Engineering</h3>
-                      <div className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-secondary/70 border border-white/5">
-                        <Calendar size={14} className="mr-1" />
-                        12/2012 - 12/2016
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center text-gray-300 mt-1">
-                      <MapPin size={16} className="mr-2 text-primary" />
-                      <span className="font-medium">Nepal Engineering College, Bhaktapur</span>
-                    </div>
+                  <h3 className="text-xl font-bold text-gradient-primary">{education.degree}</h3>
+                  <div className="inline-flex items-center px-3 py-1 rounded-full text-xs bg-secondary/70 border border-white/5">
+                    <Calendar size={14} className="mr-1" />
+                    {education.period}
                   </div>
-                  
-                  <p className="text-gray-300">
-                    Completed bachelor's of computer science and engineering from Nepal Engineering College
-                  </p>
-                  
-                  <div className="pt-2">
-                    <h4 className="text-sm uppercase tracking-wider text-gray-400 mb-3">Key Coursework:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {['Data Structures', 'Algorithms', 'Database Management', 'Software Engineering', 
-                        'Web Development', 'Operating Systems', 'Computer Networks', 'Programming Languages'].map((course) => (
-                        <span key={course} className="skill-chip">{course}</span>
-                      ))}
-                    </div>
+                  <div className="flex items-center text-gray-300">
+                    <MapPin size={16} className="mr-2 text-primary" />
+                    <span className="font-medium">{education.institution}</span>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>

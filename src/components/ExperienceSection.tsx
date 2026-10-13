@@ -5,15 +5,25 @@ import { cn } from '@/lib/utils';
 
 const experiences = [
   {
+    id: 'audio-bee',
+    title: 'Software Engineer - QA Automation III',
+    company: 'Audio Bee Technologies, Inc. (Dataweav)',
+    period: '12/2025 - Present, Remote',
+    responsibilities: [
+      'Built and maintained automated testing infrastructure for the Dataweave product, strengthening test coverage and safeguarding product quality and stability across release cycles.',
+      'Developed internal QA tools that help QA engineers monitor and ensure data quality.',
+      'Used AI-first development workflows and AI tools for code generation, debugging, and review to increase engineering velocity.',
+      'Conducted security-focused testing, including penetration testing and identifying potential vulnerabilities in software systems.',
+    ]
+  },
+  {
     id: 'logpoint',
     title: 'Senior QA Engineer (Automation)',
     company: 'Logpoint',
-    period: '04/2022 - Present, Kathmandu',
+    period: '04/2022 - 11/2025, Kathmandu',
     responsibilities: [
-      'Enhanced test coverage by 70% including UI (Web/Desktop), API, Backend and Database tests by developing and maintaining scalable test automation frameworks using Cypress, Selenium, Python, Robot Framework, Bash and AutoIT leading to faster and more reliable test execution.',
-      'Decreased test execution time by 50% by implementing parallel test execution and API driven test setups accelerating feedback loops.',
-      'Designed and developed 300+ test cases for new features, identifying and documenting 100+ defects, improving software stability.',
-      'Implemented and managed Jenkins pipeline for CI and nightly test execution enabling early defect detection and maintaining software stability.',
+      'Enhanced test coverage by 70% across UI (Web/Desktop), API, backend, and database layers using Cypress, Selenium, Python, Robot Framework, and Bash. Reduced test execution time by 50% through parallel execution and API-driven test setups.',
+      'Designed 300+ test cases, identified 100+ defects, and managed Jenkins CI/CD pipelines for nightly regression execution.',
       'Automated machine provisioning, patching, and ISO setup using Terraform, Govc, PowerShell, and Bash, eliminating manual intervention.',
       'Mentored and trained 5+ QA engineers, improving team productivity and ensuring adherence to best practices in test automation.',
     ]
@@ -26,10 +36,7 @@ const experiences = [
     responsibilities: [
       'Developed and maintained web and mobile test automation framework from scratch using Selenium, Appium and C#, enhancing test coverage by 40% and driving overall product quality improvements.',
       'Led a team of 3 QA Engineers, mentoring them on manual and automation best practices, resulting in improved and streamlined testing processes.',
-      'Conducted performance and load testing with JMeter, identifying system bottlenecks and optimizing product performance by 20%.',
-      'Implemented and managed Jenkins pipeline for CI and nightly test execution enabling early defect detection and maintaining software stability.',
-      'Identified and resolved 50+ critical bugs by analyzing test automation reports and conducting root cause analysis,driving improvements in test efficiency and product stability.',
-      'Actively participated in Agile/Scrum development processes, contributing to sprint planning, daily stand-ups, and sprint reviews.'
+      'Conducted performance and load testing with JMeter, identifying system bottlenecks and optimizing product performance by 20%. Managed Jenkins CI pipelines for nightly execution.'
     ]
   },
   {
@@ -39,11 +46,20 @@ const experiences = [
     period: '11/2018 - 04/2021, Kathmandu',
     responsibilities: [
       'Developed 200+ automation tests using Selenium and C# leading to a 30% improvement in test coverage.',
-      'Reduced test execution time by 40% through parallel execution, framework optimization, and elimination of test dependencies, speeding up feedback loops.',
-      'Optimized the automation framework and test suites, improving test reliability and reducing flakiness and false positives/negatives by 20%.',
-      'Used JMeter for performance and load testing, identifying bottlenecks that improved system performance and scalibility.',
-      'Created an in-house automation dashboard using Ember and Node, improving visibility into performance and functional test execution status.',
-      'Implemented and managed Bamboo plans for nightly test execution enabling early defect detection and maintaining software stability.'
+      'Reduced test execution time by 40% through parallelization and improved test coverage by 30%.',
+      'Optimized automation framework and test suites, reducing flakiness and false positives/negatives by 20%.',
+      'Created an in-house automation dashboard using Ember and Node to improve visibility into test execution status across teams.',
+      'Managed Bamboo CI plans for nightly execution.'
+    ]
+  },
+  {
+    id: 'federal-parliament',
+    title: 'Computer Operator',
+    company: 'Federal Parliament Secretariat',
+    period: '02/2017 - 12/2017, Kathmandu, Nepal',
+    responsibilities: [
+      'Performed high-volume data entry and digitized official government records with strict accuracy and confidentiality.',
+      'Provided desktop, hardware, and office software support to keep daily administrative workflows running smoothly.',
     ]
   }
 ];
@@ -62,7 +78,7 @@ const ExperienceSection = () => {
           <h2 className="text-3xl font-bold mb-4 text-gradient">Work Experience</h2>
           <div className="h-1 w-20 bg-primary rounded-full mx-auto mb-8"></div>
           <p className="text-gray-300">
-            Over 6+ years of professional experience in QA automation and software engineering
+            8+ years of professional experience in QA automation and software engineering
           </p>
         </div>
 

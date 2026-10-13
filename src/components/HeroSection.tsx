@@ -20,7 +20,7 @@ const HeroSection = () => {
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
                   </span>
-                  Senior QA Automation Engineer
+                  Senior SDET | Software Engineer - QA Automation
                 </span>
               </div>
               
@@ -29,8 +29,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-lg text-gray-300 animate-fade-in animate-delay-200">
-                Highly skilled and results-driven QA Automation Engineer with 6+ years of extensive experience 
-                in designing, developing, and implementing automated testing solutions.
+                Results-driven QA Automation Engineer with 8+ years of experience in designing, developing, and implementing automated testing solutions.
               </p>
               
               <div className="flex flex-wrap gap-3 animate-fade-in animate-delay-300">
@@ -50,7 +49,7 @@ const HeroSection = () => {
 
               <div className="flex gap-5 pt-5 animate-fade-in animate-delay-400">
                 <div className="flex flex-col items-center">
-                  <p className="text-3xl font-bold text-primary">6+</p>
+                  <p className="text-3xl font-bold text-primary">8+</p>
                   <p className="text-sm text-gray-400">Years of Experience</p>
                 </div>
                 <div className="h-10 border-l border-gray-700"></div>

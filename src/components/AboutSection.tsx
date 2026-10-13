@@ -104,7 +104,7 @@ const AboutSection = () => {
                   <div>
                     <div className="flex justify-between mb-1">
                       <span>PTE Academic</span>
-                      <span>Overall: 89</span>
+                      <span>Overall: 89/90</span>
                     </div>
                     <p className="text-sm text-gray-400">Listening 84 · Reading 81 · Speaking 75 · Writing 88</p>
                   </div>
